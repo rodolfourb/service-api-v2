@@ -1,20 +1,44 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Projeto Music
+Escopo deste projeto é praticar o aprendizado relacionado ao uso de JPA em projetos java usando springboot.
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+### Configuração do git
+```shell
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git config user.email "you@example.com"
+git config user.name "Your Name"
+git remote add origin git@github.com:senac-goias/music-project.git
+git push -u origin main
+```
+Resultado esperado:
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+```shell
+git push -u origin main
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (22/22), 2.23 KiB | 1.11 MiB/s, done.
+Total 22 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:senac-goias/music-project.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'
+```
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+### Configuração das variáveis de ambiente
+Estas variáveis de ambiente devem ser informadas na configuração do seu projeto.
+Seja no build ou seja na configuração do maven
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+```
+SPRING_BANNER_CHARSET=UTF-8;SPRING_BANNER_LOCATION=classpath:/banner.txt;SPRING_OUTPUT_ANSI_ENABLE=always
+```
+
+### Configuração das variáveis de ambiente no IntelliJ Community
+#### Configuração inicial
+![Alt text](./assets/images/config-env/config01.png)
+#### Opção de configuração das variáveis de sistema
+![Alt text](./assets/images/config-env/config02.png)
+#### Inserindo as variáveis de sistema
+![Alt text](./assets/images/config-env/config03.png)
