@@ -13,10 +13,10 @@ info:
 spring:
   output:
     ansi:
-      enabled: ${SPRING_OUTPUT_ANSI_ENABLE}
+      enabled: ALWAYS
   banner:
-    charset: ${SPRING_BANNER_CHARSET}
-    location: ${SPRING_BANNER_LOCATION}
+    charset: "classpath:/banner.txt"
+    location: "ALWAYS"
   jpa:
     open-in-view: false
     database-platform: org.hibernate.dialect.H2Dialect
