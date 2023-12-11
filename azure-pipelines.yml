@@ -1,0 +1,24 @@
+# Deploy to Azure Kubernetes Service
+# Build and push image to Azure Container Registry; Deploy to Azure Kubernetes Service
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+ 
+trigger:
+  - main
+  - develop
+ 
+resources:
+  repositories:
+    - repository: templates
+      name: unimed-pipelines
+      type: git
+      ref: refs/heads/main
+ 
+variables:
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+  tag: '$(Build.BuildId)'
+ 
+stages:
+  - template: java\stages\sonar-analysis.yaml@templates
+  - template: java\stages\semantic-version.yaml@templates
+  - template: java\stages\build-and-push.yaml@templates
