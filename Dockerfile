@@ -16,10 +16,10 @@ RUN mvn clean package install -Dmaven.test.skip=true
 
 # Etapa 2: Execução do Projeto
 # Define a imagem base para a segunda etapa
-FROM adoptopenjdk/openjdk11:jre-11.0.9_11-alpine
+FROM openjdk:17.0.2-slim
 # Define o diretório de implantação
 WORKDIR /app
 # Copia o artefato construído da imagem maven
-COPY --from=build /app/target/app.jar /app
-# Define o comando de execução padrão
-ENTRYPOINT ["java", "-jar", "app.jar"]
+COPY target/*.jar app.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/app/app.jar"]
