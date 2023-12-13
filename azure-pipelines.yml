@@ -19,6 +19,4 @@ variables:
   tag: '$(Build.BuildId)'
  
 stages:
-  #- template: java\stages\sonar-analysis.yaml@templates
-  #- template: java\stages\semantic-version.yaml@templates
   - template: java\stages\build-and-push.yaml@templates
