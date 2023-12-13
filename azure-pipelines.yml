@@ -14,14 +14,9 @@ resources:
       ref: refs/heads/main
  
 variables:
-  # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '459a8cf0-ac1c-4bab-9c5b-155af8d891b5'
-  imageRepository: 'serviceapi'
-  containerRegistry: 'unimedcr.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  tag: '$(Build.BuildId)'
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
+  tag: '$(Build.BuildId)'
  
 stages:
   #- template: java\stages\sonar-analysis.yaml@templates
