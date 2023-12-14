@@ -32,3 +32,4 @@ stages:
   - template: java\stages\build-and-push.yaml@templates
     parameters:
       jdkVersionOption: '1.17'
+      xpto: 'as'
