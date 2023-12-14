@@ -11,7 +11,7 @@ resources:
     - repository: templates
       name: unimed-pipelines
       type: git
-      ref: refs/heads/main
+      ref: refs/heads/develop
     - repository: helm
       name: unimed-helm
       type: git
@@ -32,4 +32,5 @@ stages:
   - template: java\stages\build-and-push.yaml@templates
     parameters:
       jdkVersionOption: '1.17'
-      xpto: 'as'
+      repositorioHelm: 'unimed-helm'
+      publishFolderArtifactHelm: 'unimed'   
