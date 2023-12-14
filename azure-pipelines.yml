@@ -20,7 +20,7 @@ resources:
 variables:
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
-  tag: '$(Build.BuildNumber)'
+  tag: 'v$(Build.BuildNumber)'
  
 stages:
   - template: java\stages\sonar-analysis.yaml@templates
