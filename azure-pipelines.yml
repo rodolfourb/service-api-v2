@@ -12,6 +12,10 @@ resources:
       name: unimed-pipelines
       type: git
       ref: refs/heads/main
+    - repository: helm
+      name: unimed-helm
+      type: git
+      ref: refs/heads/develop      
  
 variables:
   # Agent VM image name
