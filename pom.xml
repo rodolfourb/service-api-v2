@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.senac.go</groupId>
 	<artifactId>music</artifactId>
-	<version>0.1.0-alpha.35</version>
+	<version>0.1.0-alpha.31</version>
 	<name>music-project</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -74,5 +74,34 @@
 			</plugin>
 		</plugins>
 	</build>
+
+    <repositories>
+        <repository>
+			<id>maven-unimed</id>
+			<url>https://pkgs.dev.azure.com/i3connect/pipeline/_packaging/maven-unimed/maven/v1</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+ 
+    <distributionManagement>
+        <repository>
+			<id>maven-unimed</id>
+			<url>https://pkgs.dev.azure.com/i3connect/pipeline/_packaging/maven-unimed/maven/v1</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </distributionManagement>
+
+</project>
+
 
 </project>
