@@ -28,4 +28,4 @@ stages:
   - template: java\stages\build-and-push.yaml@templates
     parameters:
       repositorioHelm: 'unimed-helm'
-      publishFolderArtifactHelm: 'unimed'
+      publishFolderArtifactHelm: 'unimed'   
