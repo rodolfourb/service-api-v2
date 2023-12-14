@@ -24,8 +24,13 @@ variables:
  
 stages:
   - template: java\stages\sonar-analysis.yaml@templates
+    parameters:
+      jdkVersionOption: '1.17'
   - template: java\stages\semantic-version.yaml@templates
+    parameters:
+      jdkVersionOption: '1.17'
   - template: java\stages\build-and-push.yaml@templates
     parameters:
+      jdkVersionOption: '1.17'
       repositorioHelm: 'unimed-helm'
       publishFolderArtifactHelm: 'unimed'   
