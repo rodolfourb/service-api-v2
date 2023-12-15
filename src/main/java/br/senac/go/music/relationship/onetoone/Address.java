@@ -1,9 +1,11 @@
 package br.senac.go.music.relationship.onetoone;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 @Entity
 @Table(name = "address")
 public class Address {
