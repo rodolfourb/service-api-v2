@@ -23,6 +23,6 @@ public class UserService {
     }
 
     public User findById(Integer userId) {
-        return userRepository.findById(userId).orElse(null);
+        return userRepository.findById(userId).orElse(new User());
     }
 }
