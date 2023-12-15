@@ -21,4 +21,8 @@ public class UserService {
         User usuarioGravado = userRepository.save(user);
         return usuarioGravado;
     }
+
+    public User findById(Integer userId) {
+        return userRepository.findById(userId).orElse(null);
+    }
 }
