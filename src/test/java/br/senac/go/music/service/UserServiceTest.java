@@ -6,23 +6,20 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import br.senac.go.music.repository.UserRepository;
 import br.senac.go.music.relationship.onetoone.User;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
 
+@ExtendWith(MockitoExtension.class)
 public class UserServiceTest {
 
+    @InjectMocks
     private UserService userService;
 
     @Mock
     private UserRepository userRepository;
-
-    @BeforeEach
-    public void setUp() {
-        MockitoAnnotations.openMocks(this);
-        userService = new UserService();
-    }
 
     @Test
     public void testFindUserById() {

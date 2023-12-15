@@ -1,9 +1,7 @@
 package br.senac.go.music.resource;
 
 import br.senac.go.music.relationship.onetoone.Address;
-import br.senac.go.music.relationship.onetoone.User;
 import br.senac.go.music.service.AddressService;
-import br.senac.go.music.service.UserService;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
