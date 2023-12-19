@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.senac.go</groupId>
 	<artifactId>music</artifactId>
-	<version>0.1.0-alpha.53</version>
+	<version>0.1.0-alpha.54</version>
 	<name>music-project</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
