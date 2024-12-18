@@ -1,0 +1,19 @@
+name: CI
+on:
+  push: 
+  workflow_dispatch: 
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v4
+          
+          - name: Deploy Application
+            run: |
+                echo "rodolfo"
+            shell: bash
+    
+    scan:
+      name: Scan da Imagem
+      needs: [build]
+      uses: rodolfourb/pipe-template/.github/workflows/main.yml@main
