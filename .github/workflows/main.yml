@@ -12,4 +12,4 @@ jobs:
     scan:
       name: Scan da Imagem
       needs: [build]
-      uses: rodolfourb/pipe-template/.github/workflows/main.yml@main
+      uses: rodolfourb/pipe-template/.github/workflows/main.yml@c7d3b7ae28cb3edc57611654c7a492595265f063
