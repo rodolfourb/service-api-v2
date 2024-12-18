@@ -8,12 +8,8 @@ jobs:
         steps:
           - uses: actions/checkout@v4
           
-          - name: Deploy Application
-            run: |
-                echo "rodolfo"
-            shell: bash
     
     scan:
       name: Scan da Imagem
       needs: [build]
-      uses: rodolfourb/pipe-template/.github/workflows/main.yml@main
+      uses: rodolfourb/pipe-template/.github/workflows/java/stages/build-and-push.yml@main
